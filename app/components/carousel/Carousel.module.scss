@@ -1,11 +1,13 @@
 .slider {
     margin: 1rem auto;
+    width: 100%;
     max-height: 400px;
     position: relative;
     overflow: hidden;
 
+
     @media screen and (min-width: 768px) {
-        width: 400px;
+        width: 60%;
         height: auto;
   }
 
@@ -36,7 +38,6 @@
     flex: 1 0 100%;
     display: grid;
     place-content: center;
-    padding: 5rem;
     scroll-snap-align: start;
 
     @media screen and (min-width: 768px) {
@@ -44,87 +45,88 @@
 }
   }
   
-  .img_1 {
-    position: absolute;
-    top: 50svh;
-    left: 50svw;
-    transform: translateX(-50%, -50%);
-    overflow: hidden;
-    box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.534), 20px 20px 20px rgba(0, 0, 0, 0.171);
-    filter: grayscale(1);
+  .img_wrapper {
+    height: 400px;
+    width: 600px;
 
-    @media screen and (min-width: 768px) {
-        top: 45vh;
-        object-fit: contain;
-        
+    > img {
+      padding: 0rem;
+      margin: 0 auto;
+      width: 100%;
+      height: auto;
+
+      @media screen and (min-width: 768px) {
+        padding: 4rem;
+   }
+  
     }
-  }
-/*   .slide > img {
-    margin: 0 auto;
-    width: 300px;
-    height: auto;
-
-    @media screen and (min-width: 768px) {
-            width: 100vw;
-            height: auto;
-      }
-  } */
+  } 
 
   .slide h2 {
     position: absolute;
     top: 0;
     left: 3rem;
+    z-index: 10;
     padding: 0;
     width: 60%;
-    font-size: clamp(1.2rem, 4vw, 2.5rem);
+    font-size: clamp(1.2rem, 4vw, 2rem);
+    font-weight: 700;
     letter-spacing: 2px;
     line-height: clamp(2rem, 2.5vw, 3.5rem);
-    color: white;
+    color: rgb(238, 238, 238);
+    text-shadow: 1px 1px rgb(0, 0, 0), 10px 10px 10px rgba(34, 34, 34, 0.225);
     font-family: inherit;
   }
 
   .slide p {
     width: 100%;
-    position: relative;
+    position: absolute;
     z-index: 100;
     bottom: 0;
-    right: 1rem;
+    padding-right: 2rem;
     text-align: right;
+    color: #ffffff;
+    text-shadow: 1px 1px rgb(0, 0, 0), 10px 10px 10px rgba(34, 34, 34, 0.225);
+    background-color: black;
+    transition: background 0.3s ease-in-out;
   }
 
   .slide_arrow {
     position: absolute;
     top: 0;
     bottom: 0;
-    z-index: 10;
+    z-index: 100;
     margin: auto;
     width: 4rem;
     padding: 0;
     height: 4rem;
     display: flex;
-    background-color: rgba(41, 122, 118, 0.56);
+    align-items: center;
+    background-color: rgba(31, 31, 31, 0.56);
     border: none;
+    border: 1px solid transparent;
     font-size: 3rem;
-    color: rgb(231, 230, 230);
+    color: rgb(206, 206, 206);
     transition: background 0.2s ease;
     cursor: pointer;
   }
   
   .slide_arrow:hover,
   .slide_arrow:focus {
-    background-color: rgb(23, 221, 221);
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border: 1px solid #888;
   }
   
   .prev_btn {
     left: 0;
     text-align: center;
-    padding-left: 1.5rem;
-    padding-bottom: 1rem;
+    padding: 1rem 0 1.5rem 1.5rem;
     border-radius: 50%;
   }
   
   .next_btn {
     right: 0;
-    padding-left: 1.5rem;
+    padding: 1rem 1.5rem 1.5rem;
     border-radius: 50%;
   }

@@ -1,8 +1,8 @@
-import Link1Img from 'public/images/astroHome.png';
-import Link2Img from 'public/images/astroAbout.jpeg';
-import Link3Img from 'public/images/astroProjects.jpg';
-import Link4Img from 'public/images/astroRocket.jpg';
-import Link5Img from 'public/images/astroContact.jpg';
+import Link1Img from 'public/images/beauty.jpg';
+import Link2Img from 'public/images/cool.jpg';
+import Link3Img from 'public/images/style.jpg';
+import Link4Img from 'public/images/rob.jpg';
+import Link5Img from 'public/images/knowledge.jpg';
 
 export const carouselData = [
   {
