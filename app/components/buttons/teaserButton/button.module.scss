@@ -1,0 +1,13 @@
+.img {
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+    object-position: center;
+    margin-right: 0.5rem;
+    pointer-events: none;
+    
+    @media (max-width: 768px) {
+        width: 18px;
+        height: 18px;
+}
+}
