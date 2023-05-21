@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { useMediaQuery } from '../hooks/useMediaQuery';
 // styles
 import styles from './Carousel.module.scss';
@@ -9,31 +9,26 @@ const CarouselItem = ({ img, title, text }) => {
   const desktop = useMediaQuery(768);
 
   return (
-    <li className={styles.slide}>
-      <AnimatePresence>
+    <AnimatePresence>
+      <li className={styles.slide}>
         <motion.div
           className={styles.img_wrapper}
           initial={{
             opacity: 0,
-            
           }}
           animate={{
             opacity: 1,
-            
           }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.6, delay: 0, ease: 'easeInOut' }}
+          transition={{ duration: 0.4, delay: 0, ease: 'easeInOut' }}
         >
           <Image
             className={styles.img}
             src={img}
             alt={title}
-            fill
-            style={{
-              objectFit: 'cover',
-              objectPosition: 'center',
-              zIndex: '10',
-            }}
+            width={400}
+            height={400}
+            style={{ objectFit: 'cover', objectPosition: 'center' }}
           />
         </motion.div>
 
@@ -54,7 +49,6 @@ const CarouselItem = ({ img, title, text }) => {
         <motion.p
           initial={{
             opacity: 0,
-            scale: 0,
             y: 200,
           }}
           animate={{
@@ -62,13 +56,13 @@ const CarouselItem = ({ img, title, text }) => {
             scale: 1,
             y: 0,
           }}
-          exit={{ opacity: 0, y: -200 }}
+          exit={{ opacity: 0, y: 200 }}
           transition={{ duration: 1, delay: 0, ease: 'easeInOut' }}
         >
           {text}
         </motion.p>
-      </AnimatePresence>
-    </li>
+      </li>
+    </AnimatePresence>
   );
 };
 

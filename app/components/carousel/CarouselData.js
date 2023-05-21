@@ -8,31 +8,31 @@ export const carouselData = [
   {
     title: 'title',
     text: 'desc text',
-    id: 1,
+    id: '124',
     img: Link1Img,
   },
   {
     title: 'Hola',
     text: 'some text',
-    id: 2,
+    id: '232',
     img: Link2Img,
   },
   {
     title: 'Hello',
     text: 'some text',
-    id: 3,
+    id: '354',
     img: Link3Img,
   },
   {
     title: 'Wuz up',
     text: '/blog',
-    id: 4,
+    id: '432',
     img: Link4Img,
   },
   {
     title: 'Hi',
     text: 'some text',
-    id: 5,
+    id: '752',
     img: Link5Img,
   },
 ];

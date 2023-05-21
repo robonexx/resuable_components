@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Carousel from '../components/carousel/Carousel';
 import CarouselItem from '../components/carousel/CarouselItem';
 import { carouselData } from '../components/carousel/CarouselData';
-
+import { AnimatePresence } from 'framer-motion';
 //styles
 import styles from './Slider.module.scss';
 
@@ -23,12 +23,11 @@ const page = () => {
   return (
     <div className={styles.slider}>
       <h2>Carousel / slider</h2>
-
       <Carousel handleNext={handleNext} handlePrevious={handlePrevious}>
         {carouselData.map((c, i) => {
           if (index === i) {
             return (
-              <div key={c.id}>
+              <div key={i}>
                 <CarouselItem {...c} />
               </div>
             );

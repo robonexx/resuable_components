@@ -1,5 +1,5 @@
 import styles from './Carousel.module.scss';
-const Carousel = ({ children, handleNext, handlePrevious }) => {
+const Carousel = ({children, handleNext, handlePrevious }) => {
   return (
     <>
       <div className={styles.slider}>

@@ -46,14 +46,20 @@
   }
   
   .img_wrapper {
+    position: relative;
     height: 400px;
-    width: 600px;
+    width: 400px;
+    object-fit: cover;
+    object-position: center;
 
-    > img {
+    > .img {
+      position: absolute;
       padding: 0rem;
       margin: 0 auto;
-      width: 100%;
-      height: auto;
+      width: inherit;
+      height: inherit;
+     
+
 
       @media screen and (min-width: 768px) {
         padding: 4rem;
